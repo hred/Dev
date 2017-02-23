@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+     <script type="text/javascript">
+
+
+     	function dosetItem(){
+
+     		var produit = document.getElementById('prod').value;
+     		var data = document.getElementById('Quantité').value;
+     		localStorage.setItem(produit , data);
+     		document.getElementById('prod').value='';
+     		document.getElementById('Quantité').value='';
+     	}
+
+     	function dogetItem(){
+             
+             var produit = document.getElementById('prod').value;
+             document.getElementById('Quantité').value=localStorage.getItem(produit);
+
+
+     	}
+         function doremoveItem(){
+            
+            var produit = document.getElementById('prod').value;
+             localStorage.removeItem(produit);
+             document.getElementById('prod').value='' ;
+
+         }
+
+         function doClear(){
+
+         	localStorage.clear();
+         }
+
+     </script>
+
+</head>
+<body>
+<header>
+	<h2>Ma liste de courses</h2>
+</header>
+<section>
+	<form>
+	<p>
+	<label for = "prod">Produit :</label><br>
+	<input id = "prod" name="prod"size = "30" placeholder = "produit">
+	</p>
+
+	<p>
+	<label for = "prod">Quantité :</label><br>
+	<input id = "Quantité" name = "Quantité"size = "30" placeholder = "Quantité">
+	</p>
+	
+
+	<p>
+	<input type="button" value = "Ajouter" onclick = "dosetItem();">
+	<input type="button" value = "Modifier" onclick = "dogetItem();">
+	<input type="button" value = "Supprimer" onclick = "doremoveItem();">
+	</p>
+
+
+		
+	</form>
+</section>
+
+<input type="button" value = "Nouvelle liste" onclick = "doClear();">
+
+
+</body>
+</html>
