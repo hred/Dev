@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+</head>
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+     function dosetItem(){
+
+       var Nom = 'Nom';
+       var data1 = document.getElementById('Nom').value ;
+       
+       var Prenom ='Prenom';
+       var data2 = document.getElementById('Prenom').value ;
+
+       var adresse = 'adresse';
+       var data3 = document.getElementById('adresse').value ;
+
+       sessionStorage.setItem(Nom ,data1); 
+       sessionStorage.setItem(Prenom ,data2);
+       sessionStorage.setItem(adresse ,data3);
+
+     }
+
+
+</script>
+
+<body>
+
+
+<h2>Page1</h2>
+<header>
+<h3>Iscription</h3>
+	<section>
+		<form>
+	<p>
+	<label for = "Nom">Nom</label>
+	<input id = "Nom" name="Nom"size = "30" required = "Nom">
+	</p>
+
+	<p>
+	<label for = "Prenom">Prenom</label>
+	<input id = "Prenom" name="Prenom"size = "30" required = "Prenom">
+	</p>
+
+	<p>
+	<label for = "adresse">adresse</label>
+	<input id = "adresse" name="adresse"size = "30" required = "adresse">
+	</p>
+
+	<p>
+	<input type="button" value = "Suite"onclick = "dosetItem();">
+	</p>
+
+
+		</form>
+
+	</section>
+
+</header>
+
+</body>
+</html>
